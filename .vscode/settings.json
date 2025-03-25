@@ -1,0 +1,16 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "biome.enabled": true,
+  "editor.defaultFormatter": "dprint.dprint",
+  "[html,javascript,typescript,css,scss,json,jsonc]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [100]
+}
