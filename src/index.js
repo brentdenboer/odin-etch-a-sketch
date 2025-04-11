@@ -8,13 +8,23 @@ function createGrid(gridSize, gridContainer) {
     gridItem.style.width = `calc(100% / ${gridSize})`;
 
     gridItem.addEventListener("mouseenter", () => {
-      gridItem.classList.add("grid-item--hovered");
+      const itemStyle = gridItem.style;
+
+      itemStyle.background = randomRGB();
     });
 
     arrayOfGridItems.push(gridItem);
   }
 
   gridContainer.replaceChildren(...arrayOfGridItems);
+}
+
+function ranRGBNum() {
+  return Math.floor(Math.random() * 255);
+}
+
+function randomRGB() {
+  return `rgb(${ranRGBNum()} ${ranRGBNum()} ${ranRGBNum()})`;
 }
 
 function main() {

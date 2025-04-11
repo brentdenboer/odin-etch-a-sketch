@@ -14,14 +14,11 @@ body {
   flex-wrap: wrap;
   aspect-ratio: 1;
   height: 80vh;
-  border: 1px solid gray;
   background: white;
 }
 
 .grid-item {
-  box-sizing: border-box;
   aspect-ratio: 1;
-  border: 1px solid gray;
 }
 
 .grid-item--hovered {
