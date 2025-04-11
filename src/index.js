@@ -3,6 +3,7 @@ function createGrid(gridSize, gridContainer) {
 
   for (let i = 0; i < (gridSize * gridSize); i++) {
     const gridItem = document.createElement("div");
+
     gridItem.classList.add("grid-item");
     gridItem.style.width = `calc(100% / ${gridSize})`;
 
@@ -25,7 +26,12 @@ function main() {
   createGrid(gridSize, gridContainer);
 
   gridSizeButton.addEventListener("click", () => {
-    gridSize = prompt("Enter the size of the grid!");
+    gridSize = prompt("Enter the size of the grid! (Max 100)");
+
+    while (gridSize > 100) {
+      gridSize = prompt("Please enter a number of 100 or less");
+    }
+
     createGrid(gridSize, gridContainer);
   });
 }
